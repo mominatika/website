@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Open Sans';
+}
+.container{
+	width: 100%;
+	display: flex;
+}
+/*.mainpart{border: 1px solid red}*/
+
+.menubar{
+		width: 27%;
+		/*width: 350px;*/
+	background-color:#F2F2F2;
+	/*opacity: 1;*/
+}
+.logo {
+
+		text-align: center;
+		margin:54px 0 0px 0;
+		/*top:50px;*/
+		/*text-align: center;*/
+		/*padding: 50px ;*/
+}
+.logo img{
+		width: 230px;
+		height: 70px;
+		
+		/*border: 1px solid red;*/
+}
+.link-fontsize a{
+			font-size: 18px;
+}
+.linkmenu h2{
+			font-size: 16px;
+			padding:  17px 0;
+			font-weight:900;
+
+			/*color:;	*/
+			text-transform: uppercase;
+}
+.linkmenu{
+
+	/*border: 1px solid blue;*/
+	/*padding-left: 30px;*/
+	padding: 30px 0px 30px 30px;
+
+
+}
+.linkmenu a{
+	color: grey;
+	padding: 5px 0;
+	display: inline-block;
+	width: 200px;
+	/*margin-left:5px;*/
+}
+img{
+		width: 15px;
+		height: 15px;
+		margin-right: 5px;
+
+}
+main{ 
+	width: 73%;
+	width: 100%;
+	opacity: 1;
+	/*padding-left:20px; */
+
+}
+.navbar{
+	/*outline: 1px solid black;*/
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+}
+.left-menu{
+	outline:1px solid red; 
+			display: flex;
+			position: relative;
+			align-items: center;
+			width: 200px;
+
+}
+.left-menu h2{
+				font-size: 15px;
+				position: absolute;
+				left: 44px;
+				top:10px;
+}
+.left-menu img{
+		width:33px;
+		height: 33px;
+		
+
+}
+.right-menu img{width: 27px;
+				height: 27px;
+				/*position: absolute;*/
+				/*top:0;*/
+				/*left: 0px;*/
+				margin: 0 15px;
+				/*margin-right: 70px;*/
+}
+.right-menu{
+	/*border: 1px solid blue;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+
+
+}
+/*.link-font{font-size: 15px;} */
+.right-menu a{
+				/*font-size: 15px;*/
+				font-weight: 500;
+}
+.sage a{color:#458D1A;
+		font-weight: 500;
+		
+ }
+.sage-word{
+			font-weight: 900;
+}
+.admin{
+	/*border: 1px solid red;*/
+	width: 120px;
+		position: relative;
+			/*padding: 10px;*/
+		/*padding: 0 0 0 30px;*/
+}
+.admin a{
+		color: grey;
+		font-weight: 500;
+		position: absolute;
+		top:4px;
+}
+.second-navbar{background-color: #63BA2F;
+				margin-left: 20px;
+				display: flex;
+				justify-content: space-between;
+				padding: 14px;
+
+	
+	}
+.second-navbar a{color: white}
+.main-content{
+				/*height: 4		00px;*/
+				overflow-y: auto;
+
+}
+
+@media only screen and (max-width:1180px)
+{
+		body{background-color: pink}	
+		.menubar{
+			width: 20%;
+					/*width: 300px;*/
+		}
+		main{
+				width: 80%;
+		}
+		.logo img{width: 200px;
+					height: 60px;
+		}
+		.link-fontsize a{
+			font-size: 15px;
+		}
+		.linkmenu h2{
+			font-size: 14px;
+			}
+			.left-menu h2{
+				font-size: 13px;
+				
+		}
+		/*.right-menu*/
+}
+@media only screen and (max-width: 1024px)
+{
+	body{background-color: yellow}
+	.menubar{
+
+			width: 200px;
+	}
+	main{width: 100%}
+	.logo img{
+		width: 180px;
+		height: 50px;
+
+	}
+	.link-fontsize a{
+			font-size: 13px;
+		}
+		.link-fontsize a{
+			font-size: 15px;
+		}
+		.linkmenu h2{
+			font-size: 12px;
+			}
+			.left-menu h2{
+				font-size: 11px;
+				
+		}
+
+}
+@media only screen and (max-width: 800px)
+{
+	body{background-color: white}
+	.menubar{
+				width: 150px;
+				padding: 13px;
+
+	}
+	.logo img{
+		width: 150px;
+		height: 40px;
+	}
+	.link-fontsize a{
+			font-size: 11px;
+		}
+		.linkmenu h2{
+			font-size: 9px;
+			}
+			.left-menu h2{
+				font-size: 10px;
+				
+		}
+		/*.left-menu{width: 130px;}*/
+		.right-menu img{
+						width: 25px !important;
+						height: 25px;
+						/*border: 1px solid red;*/
+		}
+		.admin a{
+		/*color: grey;*/
+		/*font-weight: 500;*/
+		/*position: absolute;*/
+		top:7px;
+}
+@media only screen and (max-width:767px)
+{
+	body{background-color: green}
+	.menubar{
+				width: 150px;
+				padding: 12px;
+
+	}
+	/*main{width: }*/
+	.logo img{
+		width: 130px;
+		height: 30px;
+	}
+	.link-fontsize a{
+			font-size: 9px;
+		}
+		.linkmenu h2{
+			font-size: 8px;
+			}
+			.left-menu h2{
+				font-size: 8px;
+		
+		}
+		.left-menu{width: 130px;}
+		.right-menu img{
+						width: 22px !important;
+						height: 22px;
+						margin-left: 10px;
+						/*border: 1px solid red;*/
+		}
+		.admin a{
+		/*color: grey;*/
+		/*font-weight: 500;*/
+		/*position: absolute;*/
+		top:8px;
+
+}
+
+
+	}
+	@media only screen and (max-width:550px)
+	{
+		body{
+					background-color: red;
+
+		}
+		.menubar{
+				width: 140px;
+				padding: 11px;
+
+	}
+	/*main{width: }*/
+	.logo img{
+		width: 120px;
+		height: 30px;
+	}
+	.link-fontsize a{
+			font-size: 9px;
+		}
+		.linkmenu h2{
+			font-size: 8px;
+			}
+			.left-menu h2{
+				font-size: 8px;
+		
+		}
+		.left-menu{width: 120px;
+				outline: 1px solid white
+		}
+		.right-menu img{
+						width: 22px !important;
+						height: 22px;
+						/*border: 1px solid red;*/
+		}
+		.right-nav{outline: 1px solid white;
+						margin-right: 15px;
+		}
+		.left-menu img{width: 25px;
+						height: 25px;
+		}
+		.left-menu h2{top:2px;}
+		.admin a{
+		
+		top:8px;
+			}
+		.admin {border:1px solid white;
+				width: 100px;
+				}
+		
+	}

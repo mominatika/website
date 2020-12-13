@@ -1,0 +1,18 @@
+.container{display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	
+	align-content: center;
+
+}
+
+.left-part{border:1px solid black;
+
+}
+.inner-left-part{border: 1px solid red;
+				width: 400px;
+				/*text-align: center;*/
+
+}
+.right-part{background-color:#63BA2F}
+
