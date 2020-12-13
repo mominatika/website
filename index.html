@@ -85,7 +85,7 @@
 			$("#settings").click(function(){
 
 				$.ajax({
-						type:"POST",
+						type:"GET",
 						url:"settings.html",
 						success:function(result){
 							$("#main").html(result);
