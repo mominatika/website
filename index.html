@@ -3,6 +3,7 @@
 <head>
 	<title>WaysUp</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
 </head>
 <body>
 		
@@ -16,15 +17,20 @@
 			<ul>
 				<!-- <li>configration<li> -->
 					<h2>Configration</h2>
-					<li><a href="#"><img class="link-icon" src='images/Path.png'>interfaces</a></li>
-					<li><a href="#"><img class="link-icon"  src='images/settings.png'>settings</a></li>
+					<li><a href="#" id="interfaces"><img class="link-icon" src='images/Path.png'>interfaces</a></li>
+					<li><a href="javascript:void(0);" id="settings"><img class="link-icon"  src='images/settings.png'>settings</a></li>
 					<li><a href="#"><img class="link-icon"  src='images/Path 135.png'>mapping</a></li>
 					<li><a href="#"><img src='images/Path 136.png'>Frequency</a></li>
 					<h2>VAlidate</h2>
 					<li><a href="#"><img src='images/Path 138.png'>INtegration Test</a></li>
 					<li><a href="#"><img src='images/Path 155.png'>Event Logs</a></li>
+					<li class="bottom-text"><a href="#" class="bottom-link"><img src="images/Path 158.png">Support</a></li>
 			</ul>
 		</div>
+		<!-- <div class="menu-bottom">
+
+			<a href="#"><img src="images/Path 138.png">Support</a>
+		</div> -->
 		</aside>
 		<main class="mainpart"> 
 			<div class="navbar">
@@ -59,7 +65,9 @@
 
 			<div class="main-content">
 
+				<div id="main">
 
+				</div>
 			</div>
 		
 			
@@ -70,6 +78,27 @@
 			
 		</main>
 	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("#settings").click(function(){
+
+				$.ajax({
+						type:"POST",
+						url:"settings.html",
+						success:function(result){
+							$("#main").html(result);
+						}
+				});
+
+
+			});
+
+		});
+	</script>
+
 
 </body>
+
 </html>

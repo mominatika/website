@@ -1,18 +1,45 @@
-.container{display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-content: center;
-	
-	align-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
 
 }
 
-.left-part{border:1px solid black;
+.container{
+	display: flex;
+			top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.right-side{background: #63BA2F 0% 0% no-repeat padding-box;
+opacity: 1;
 
 }
-.inner-left-part{border: 1px solid red;
-				width: 400px;
-				/*text-align: center;*/
-
+.rightpage{
+	top: 505px;
+left: 1237px;
+width: 477px;
+height: 71px;
 }
-.right-part{background-color:#63BA2F}
-
+.loginpage{
+top: 294px;
+left: 242px;
+width: 545px;
+height: 492px;
+opacity: 1;
+}
+h2{
+	top: 505px;
+left: 1237px;
+width: 477px;
+height: 71px;
+	text-align: left;
+letter-spacing: 1.25px;
+color: #FFFFFF;
+opacity: 1;
+}
