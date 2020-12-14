@@ -1,0 +1,30 @@
+.customer{
+	/*border: 1px solid red;*/
+	display: flex;
+	padding: 15px;
+	margin-top: 40px;
+
+}
+.customer img{width: 140px;
+			height: 100px;
+}
+.about-customer{
+	margin-left: 20px;
+	/*border: 1px solid red;*/
+}
+.about-customer h2{
+	font-size: 20px;
+}
+@media only screen  and (max-width: 800px)
+{
+	/*body{background-color: red;}*/
+	.about-customer h2{
+	font-size: 13px;
+
+		}
+		.customer img{width: 100px;
+			height: 60px;
+		}
+
+
+}

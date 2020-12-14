@@ -17,12 +17,12 @@
 			<ul>
 				<!-- <li>configration<li> -->
 					<h2>Configration</h2>
-					<li><a href="#" id="interfaces"><img class="link-icon" src='images/Path.png'>interfaces</a></li>
-					<li><a href="javascript:void(0);" id="settings"><img class="link-icon"  src='images/settings.png'>settings</a></li>
-					<li><a href="#"><img class="link-icon"  src='images/Path 135.png'>mapping</a></li>
-					<li><a href="#"><img src='images/Path 136.png'>Frequency</a></li>
+					<li><a href="javascript:void(0);" id="interface" class="ajaxMenuItem"><img class="link-icon" src='images/Path.png'>interfaces</a></li>
+					<li><a href="javascript:void(0);" id="settings"  class="ajaxMenuItem"><img class="link-icon"  src='images/settings.png'>settings</a></li>
+					<li><a href="javascript:void(0);" id="mapping" class="ajaxMenuItem"><img class="link-icon"  src='images/Path 135.png'>mapping</a></li>
+					<li><a href="javascript:void(0);" id="Frequency" class="ajaxMenuItem"><img src='images/Path 136.png'>Frequency</a></li>
 					<h2>VAlidate</h2>
-					<li><a href="#"><img src='images/Path 138.png'>INtegration Test</a></li>
+					<li><a href="javascript:void(0);" id="Integration" class="ajaxMenuItem"><img src='images/Path 138.png'>Integration Test</a></li>
 					<li><a href="#"><img src='images/Path 155.png'>Event Logs</a></li>
 					<li class="bottom-text"><a href="#" class="bottom-link"><img src="images/Path 158.png">Support</a></li>
 			</ul>
@@ -51,17 +51,7 @@
 				</div>
 
 			</div>
-			<div class="second-navbar link-fontsize">
-		
-				<div class="left-nav">
-					<a href="#">Integration Test</a>
-				</div>
-				<div class="right-nav">
-
-					<a href="#"> Review Integration</a>
-				</div>
-
-			</div>
+			
 
 			<div class="main-content">
 
@@ -82,18 +72,29 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function(){
-			$("#settings").click(function(){
+			// $(".ajaxMenuItem").click(function(){
+			$("body").on( "click"  , ".ajaxMenuItem", function(){
+				// alert("clicked");
+				getPage(this);
 
+			});
+
+			function getPage(it){
+				if(it === 1){
+					var page = 'interface.html';
+				}else{
+				var page = $(it).attr('id') + '.html';
+				}
 				$.ajax({
 						type:"GET",
-						url:"settings.html",
+						url:page,
 						success:function(result){
 							$("#main").html(result);
 						}
 				});
 
-
-			});
+			}
+getPage(1);
 
 		});
 	</script>
