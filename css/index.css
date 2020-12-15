@@ -238,8 +238,8 @@ main{
 
 
 		}
-				.Support{border: 1px solid blue;
-			/*position: absolute;*/
+				.Support{
+					/*border: 1px solid blue;*/
 		top:180px;
 		left: 17%;
 		width: 850px;
@@ -446,7 +446,7 @@ main{
 
 	}
 	.Support{
-				border: 1px solid blue;
+				/*border: 1px solid blue;*/
 			position: absolute;
 		top:180px;
 		left: 22% !important;
