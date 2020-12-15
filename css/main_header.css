@@ -53,6 +53,30 @@
 .bottom-img img{width: 20px;
 			height: 20px;
 }
+input{
+	width: 200px;
+	padding: 7px;
+	display: block;
+	margin: 15px;
+	border-radius: 5px;
+	border:1px solid #ddd; 
+}
+.form-field{
+			position: relative;
+}
+.form-field input{
+				padding-left: 40px;
+}
+.form-field img{position: absolute;
+				top:10px;
+				left:25px;
+
+
+}
+.save-btn{background-color: #63BA2F;
+			color: white;
+
+}
 @media only screen and (max-width: 1025px){
 		/*body{background-color: pink}*/
 
@@ -77,6 +101,22 @@
 			.bottom-img img{width: 15px;
 			height: 15px;
 }
+	input{	padding: 3px;
+			margin: 10px;
+			font-size: 10px;
+	}
+	.form-field img{position: absolute;
+				top:5px;
+				left:25px;
+
+
+		}
+		.save-btn{font-size: 10px;
+			background-color: #63BA2F;
+			color: white;
+
+}
+
 }
 @media only screen and (max-width: 800px){
 /*body{background-color: yellow}*/
@@ -104,6 +144,10 @@
 .about-customer h2{
 	font-size: 20px;
 }
+input{
+		width: 100px;
+		/*padding: 5px;*/
+}
 }
 .ftp-form{
 		/*border: 1px solid red;*/
@@ -111,29 +155,6 @@
 
 
 }
-input{
-	width: 200px;
-	padding: 7px;
-	display: block;
-	margin: 15px;
-	border-radius: 5px;
-	border:1px solid #ddd; 
-}
-.form-field{
-			position: relative;
-}
-.form-field input{
-				padding-left: 40px;
-}
-.form-field img{position: absolute;
-				top:10px;
-				left:25px;
 
-
-}
-.save-btn{background-color: #63BA2F;
-			color: white;
-
-}
 
 /*.image1{border: 1px solid red;*/

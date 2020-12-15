@@ -3,10 +3,11 @@
 <head>
 	<title>WaysUp</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-		
+		<!-- <div class="container-fluid"> -->
 	<div class="container">
 		<aside class="menubar">
 			<div class="logo">
@@ -23,8 +24,8 @@
 					<li><a href="javascript:void(0);" id="Frequency" class="ajaxMenuItem"><img src='images/Path 136.png'>Frequency</a></li>
 					<h2>VAlidate</h2>
 					<li><a href="javascript:void(0);" id="Integration" class="ajaxMenuItem"><img src='images/Path 138.png'>Integration Test</a></li>
-					<li><a href="#"><img src='images/Path 155.png'>Event Logs</a></li>
-					<li class="bottom-text"><a href="#" class="bottom-link"><img src="images/Path 158.png">Support</a></li>
+					<li><a href="javascript:void(0);" id="Event" class="ajaxMenuItem"><img src='images/Path 155.png'>Event Logs</a></li>
+					<li class="bottom-text"><a href="#" id="contact" class="bottom-link"><img src="images/Path 158.png">Support</a></li>
 			</ul>
 		</div>
 		<!-- <div class="menu-bottom">
@@ -59,7 +60,21 @@
 
 				</div>
 			</div>
-		
+			<div id="main-support">
+			<div class="Support">
+				<div class="image s1">
+				<img src="images/Group 76@2x.png">
+				</div>
+
+				<div class="contactus s1">
+					<span class="close"><i class="fa fa-times"></i></span>
+					<div class="Support-content">
+				<h1>call us for quick support</h1>
+				<h1>91 999 88 73 404</h1>
+			</div>
+			</div>
+		</div>
+	</div>
 			
 			
 
@@ -67,7 +82,10 @@
 
 			
 		</main>
-	</div>
+
+
+	<!-- </div> -->
+</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script type="text/javascript">
 		
@@ -78,10 +96,17 @@
 				getPage(this);
 
 			});
+			$("#contact").click(function(){
+				$('#main-support').show();
+				$(".close").click(function(){
+					$('#main-support').hide();
+				});
+			});
 
 			function getPage(it){
 				if(it === 1){
 					var page = 'interface.html';
+
 				}else{
 				var page = $(it).attr('id') + '.html';
 				}

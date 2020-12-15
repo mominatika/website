@@ -1,0 +1,47 @@
+table ,th ,td{
+	border:3px solid white;
+
+}
+table{width: 100%}
+th,td{
+	padding: 8px;
+	margin: 10px;
+
+}
+
+th{
+	background-color: #70AD47;
+	margin-bottom: 10px;
+}
+td{
+
+	background-color: #D5E3CF;
+}
+@media only screen and (max-width: 1025px)
+{
+	/*body{background-color: yellow}*/
+	table{
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 800px)
+{
+	/*body{background-color: grey}*/
+
+	table{
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width: 767px)
+{
+	/*body{background-color: pink}*/
+
+	table{
+		font-size: 9px;
+	}
+	th,td{
+	padding: 7px;
+	margin: 10px;
+
+}
+}

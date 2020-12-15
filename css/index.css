@@ -13,6 +13,7 @@
 				
 }
 .menubar{
+	/*position: relative;*/
 		width: 27%;
 		/*width: 350px;*/
 	background-color:#F2F2F2;
@@ -166,10 +167,53 @@ main{
 				overflow-y: auto;
 
 }
+.container-fluid{position: relative;}
+#main-support{display: none;}
+.Support{
+		border: 1px solid #00000029;
+		display: flex;
+		width: 900px;
+		height: 400px;
+		position: absolute;
+		top:180px;
+	/*left:305px;*/
+		left:18%; 	
+		background-color:white;
+}
+.s1{
+	/*border: 1px solid blue;*/
+	width: 50%;
+}
+.image img{
+			width: 90%;
+			height: 88%;
+			margin-top:10%;
+
+}
+.close{text-align:center;
+		color: #00000029;
+		/*margin-left: 400px;*/
+		font-size: 1.5em;
+
+}
+/*.Support-content{border: 1px solid black}*/
+.contactus{position: relative;
+		text-align: right;
+
+			/*text-align: center;*/
+}
+.Support-content{position:absolute;
+				top:50%;
+				bottom: 50%;
+				line-height: 50px;
+				color: #63BA2F;
+				text-align: left;
+
+}
 
 @media only screen and (max-width:1180px)
 {
-		/*body{background-color: pink}	*/
+		body{background-color: pink}	
 
 		.container{
 				/*border: 1px solid red*/
@@ -193,9 +237,20 @@ main{
 
 
 		}
+				.Support{border: 1px solid blue;
+			/*position: absolute;*/
+		top:180px;
+		left: 17%;
+		width: 850px;
+		height: 300px;
+			}
+			.Support-content{
+					font-size: 14px;
+			}
 		.linkmenu a{
 		
 					width: 150px;
+					
 				
 				}
 		main{
@@ -214,13 +269,21 @@ main{
 				font-size: 13px;
 				
 		}
+		.image img{
+			width: 90%;
+			height: 85%;
+			margin-top:15%;
+
+		}
+
+
 		
 		/*.right-menu*/
 }
 @media only screen and (max-width: 1024px)
 {
 	body{
-		/*background-color: yellow;*/
+		background-color: yellow;
 		/*border: 1px solid black;*/
 
 
@@ -244,6 +307,7 @@ main{
 	.linkmenu a{
 		
 					width: 110px;
+					font-size: 12px;
 				
 				}
 	.menubar{
@@ -261,11 +325,9 @@ main{
 		height: 50px;
 
 	}
-	.link-fontsize a{
-			font-size: 13px;
-		}
+	
 		.link-fontsize a{
-			font-size: 15px;
+			font-size: 11px;
 		}
 		.linkmenu h2{
 			font-size: 12px;
@@ -274,12 +336,30 @@ main{
 				font-size: 11px;
 				
 		}
+			.Support{
+				/*border: 1px solid blue;*/
+			position: absolute;
+		top:180px;
+		left: 18%;
+		/*left:180px!important;*/
+		width: 650px;
+		height: 250px;
+			}
+			.Support-content{
+					font-size: 10px;
+			}
+			.image img{
+			width: 90%;
+			height: 79%;
+			margin-top:15%;
+
+		}
 
 }
 @media only screen and (max-width: 800px)
 {
 	body{
-		/*background-color: white*/
+		background-color: grey
 	}
 	.menubar{
 				width: 150px;
@@ -311,11 +391,25 @@ main{
 		/*font-weight: 500;*/
 		/*position: absolute;*/
 		top:7px;
+		}
+		.Support{
+				/*border: 1px solid blue;*/
+			position: absolute;
+		top:180px;
+		left: 18%;
+		/*left:180px!important;*/
+		width: 500px;
+		height: 250px;
+			}
+			.Support-content{
+					font-size: 9px;
+			}
+
 }
 @media only screen and (max-width:767px)
 {
 	
-	/*body{background-color: green}*/
+	body{background-color: green}
 	.menubar{
 				width: 150px;
 				padding: 12px;
@@ -349,7 +443,26 @@ main{
 		/*position: absolute;*/
 		top:8px;
 
-}
+	}
+	.Support{
+				border: 1px solid blue;
+			position: absolute;
+		top:180px;
+		left: 22% !important;
+		/*left:180px!important;*/
+		/*margin-left: 40px;*/
+		width: 390px;
+		height: 250px;
+			}
+			.Support-content{
+					font-size: 8px;
+			}
+			.image img{
+			/*width: 90%;*/
+			/*height: 79%;*/
+			margin-top:27%;
+
+		}
 
 
 	}
