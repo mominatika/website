@@ -176,6 +176,7 @@ main{
 		height: 400px;
 		position: absolute;
 		top:180px;
+		/*display:none;*/
 	/*left:305px;*/
 		left:18%; 	
 		background-color:white;
@@ -213,7 +214,7 @@ main{
 
 @media only screen and (max-width:1180px)
 {
-		body{background-color: pink}	
+		/*body{background-color: pink}	*/
 
 		.container{
 				/*border: 1px solid red*/
@@ -283,7 +284,7 @@ main{
 @media only screen and (max-width: 1024px)
 {
 	body{
-		background-color: yellow;
+		/*background-color: yellow;*/
 		/*border: 1px solid black;*/
 
 
@@ -359,7 +360,7 @@ main{
 @media only screen and (max-width: 800px)
 {
 	body{
-		background-color: grey
+		/*background-color: grey*/
 	}
 	.menubar{
 				width: 150px;
@@ -409,7 +410,7 @@ main{
 @media only screen and (max-width:767px)
 {
 	
-	body{background-color: green}
+	/*body{background-color: green}*/
 	.menubar{
 				width: 150px;
 				padding: 12px;
