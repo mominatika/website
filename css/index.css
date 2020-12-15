@@ -470,7 +470,7 @@ main{
 	@media only screen and (max-width:550px)
 	{
 		body{
-					/*background-color: red;*/
+					background-color: red;
 		}
 		.menubar{
 				width: 140px;

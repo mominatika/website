@@ -6,6 +6,7 @@ table{width: 100%}
 th,td{
 	padding: 8px;
 	margin: 10px;
+	empty-cells: initial;
 
 }
 
