@@ -1,0 +1,12 @@
+.activefont a .font{
+		color:#63BA2F;
+		/*color: red;*/
+}
+.offclock{
+	filter: grayscale(100%);
+}
+.clockon img{
+		filter: none;
+			/*filter: saturate(3);*/
+			/*filter: grayscale(100%);
+}

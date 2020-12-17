@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>settings</title>
-	<link rel="stylesheet" type="text/css" href="css/frequency.css">
 	<link rel="stylesheet" type="text/css" href="css/main_header.css">
+
+	<link rel="stylesheet" type="text/css" href="css/frequency.css">
 </head>
 <body>
 	<div class="second-navbar link-fontsize">
@@ -22,10 +23,10 @@
 				<div class="header frequency">
 					<h1>set your Synchronisation Frequency</h1>
 				</div>
-				<div class="box-container">
-					<div class="box">
+				<div class="box-container activelink">
+					<div class="box activefont clockon">
 						<a href="#">
-						<img src="images/Group 28@2x.png">
+						<img class="offclock" src="images/Path 548@2x.png">
 					
 					<span class="font">Every Hour</span>
 				</a>
@@ -33,7 +34,7 @@
 
 					<div class="box">
 						<a href="#">
-						<img src="images/Group 28@2x.png">
+						<img class="offclock" src="images/Path 548@2x.png">
 					
 					<span class="font">Every Hour</span>
 					</a>
@@ -42,7 +43,7 @@
 
 					<div class="box">
 						<a href="#">
-						<img src="images/Group 28@2x.png">
+						<img class="offclock" src="images/Path 548@2x.png">
 					
 					<span class="font">Every Hour</span>
 				</a>
@@ -50,13 +51,32 @@
 
 					<div class="box">
 						<a href="#">
-						<img src="images/Path 548.png">
+						<img class="offclock" src="images/Path 548.png">
 					
-					<span class="font">Every Hour</span>
+					<span class="font green">Every Hour</span>
 				</a>
 					</div>
 
 				</div>
 		</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+
+					activelink();
+					
+				});
+				
+				function activelink(){
+
+					$(".activelink .box").click(function(){
+							// alert("1");
+						$(".box").removeClass('activefont clockon');
+
+						$(this).closest(".box").addClass('activefont clockon');
+					});
+				}
+			</script>
+
+				
 		</body>
 		</html>

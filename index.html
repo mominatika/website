@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>WaysUp</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,14 +19,14 @@
 			<ul>
 				<!-- <li>configration<li> -->
 					<h2>Configration</h2>
-					<li><a href="javascript:void(0);" id="interface" class="ajaxMenuItem"><img class="link-icon" src='images/Path.png'>interfaces</a></li>
-					<li><a href="javascript:void(0);" id="settings"  class="ajaxMenuItem"><img class="link-icon"  src='images/settings.png'>settings</a></li>
-					<li><a href="javascript:void(0);" id="mapping" class="ajaxMenuItem"><img class="link-icon"  src='images/Path 135.png'>mapping</a></li>
-					<li><a href="javascript:void(0);" id="Frequency" class="ajaxMenuItem"><img src='images/Path 136.png'>Frequency</a></li>
+					<li class="active icon-color"><a href="javascript:void(0);" id="interface" class="ajaxMenuItem"><img class="link-icon icon" src='images/Path 141.png'>interfaces</a></li>
+					<li><a href="javascript:void(0);" id="settings"  class="ajaxMenuItem"><img class="link-icon icon"  src='images/settings.png'>settings</a></li>
+					<li><a href="javascript:void(0);" id="mapping" class="ajaxMenuItem"><img class="link-icon icon"  src='images/Path 135@2x.png'>mapping</a></li>
+					<li><a href="javascript:void(0);" id="Frequency" class="ajaxMenuItem"><img class="icon" src='images/Path 136.png'>Frequency</a></li>
 					<h2>VAlidate</h2>
-					<li><a href="javascript:void(0);" id="Integration" class="ajaxMenuItem"><img src='images/Path 138.png'>Integration Test</a></li>
-					<li><a href="javascript:void(0);" id="Event" class="ajaxMenuItem"><img src='images/Path 155.png'>Event Logs</a></li>
-					<li class="bottom-text"><a href="#" id="contact" class="bottom-link"><img src="images/Path 158.png">Support</a></li>
+					<li><a href="javascript:void(0);" id="Integration" class="ajaxMenuItem"><img class="icon" src='images/Path 138.png'>Integration Test</a></li>
+					<li><a href="javascript:void(0);" id="Event" class="ajaxMenuItem"><img class="icon" src='images/Path 155.png'>Event Logs</a></li>
+					<li class="bottom-text"><a href="#" id="contact" class="bottom-link"><img  src="images/Path 158.png">Support</a></li>
 			</ul>
 		</div>
 		<!-- <div class="menu-bottom">
@@ -42,13 +43,13 @@
 					<h2>Company Name Here</h2>
 				</div>
 				<div class="right-menu link-fontsize">
-					<div class="sage">
-					<a href="#">For <span class="sage-word">Sage</span> 100Cloud</a>
-				</div>
-				<div class="admin link-fontsize">
-					<img src="images/Group 61.png">
-					<a href="#">Admin</a>
-					</div>
+					<!-- <div class="sage"> -->
+					<span class="link-fontsize sage-word"><a href="#">For <span class="sage-word">Sage</span> 100Cloud</a></span>
+				<!-- </div> -->
+				<!-- <div class="admin link-fontsize"> -->
+					<span class='admin-logo'><img src="images/Group 61.png"></span>
+					<span class="admin link-fontsize"><a href="#">Admin</a></span>
+					<!-- </div> -->
 				</div>
 
 			</div>
@@ -93,9 +94,16 @@
 			// $(".ajaxMenuItem").click(function(){
 			$("body").on( "click"  , ".ajaxMenuItem", function(){
 				// alert("clicked");
+				
+				active_link();
 				getPage(this);
+				
+
+
 
 			});
+				
+
 			$("#contact").click(function(){
 				$('#main-support').show();
 				$(".close").click(function(){
@@ -103,12 +111,22 @@
 				});
 			});
 
+			function active_link(){
+				$('ul li').click(function(){
+					$('li').removeClass('active icon-color');
+					$(this).closest('li').addClass('active icon-color');
+				});
+			}
+			
+
+
 			function getPage(it){
 				if(it === 1){
 					var page = 'interface.html';
 
 				}else{
 				var page = $(it).attr('id') + '.html';
+
 				}
 				$.ajax({
 						type:"GET",
@@ -119,9 +137,12 @@
 				});
 
 			}
-getPage(1);
+			getPage(1);
+
+			
 
 		});
+
 	</script>
 
 

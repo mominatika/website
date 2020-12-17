@@ -34,7 +34,7 @@
 
 
 					</div>
-					<span class="bottom-img"><img src="images/Group 17.png"></span>
+					<span><img class="bottom-img" src="images/Group 17.png"></span>
 				</div>
 
 					<div class="box-1">
@@ -43,15 +43,15 @@
 							<span class="font">setting</span>		
 
 					</div>
-						<span class="bottom-img"><img src="images/Group 17.png"></span>
+						<span><img class="bottom-img" src="images/Group 17.png"></span>
 				</div>
 				<div class="box-1">
 					<div class="box">
-							<img src="images/Path 135.png">
+							<img src="images/Path 135@2x.png">
 							<span class="font">mapping</span>		
 
 					</div>
-						<span class="bottom-img"><img src="images/Group 17.png"></span>
+						<span><img class="bottom-img" src="images/Group 17.png"></span>
 				</div>
 				<div class="box-1">
 					<div class="box">
@@ -59,7 +59,7 @@
 							<span class="font">Frequency</span>		
 
 					</div>
-						<span class="bottom-img"><img src="images/Group 17.png"></span>
+						<span><img class="bottom-img" src="images/Group 17.png"></span>
 				</div>
 				<div class="box-1">
 					<div class="box">
@@ -67,7 +67,7 @@
 						<span class="font">validate</span>		
 
 					</div>
-						<span class="bottom-img"><img src="images/Group 17.png"></span>
+						<span><img class="bottom-img" src="images/Group 17.png"></span>
 				</div>
 
 			</div> 
@@ -86,5 +86,26 @@
 		</div>
 	</div>
 
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".box-1 .bottom-img").click(function(){
+					if($(this).parents().children(".box").hasClass('cancel') ){
+
+						$(this).parents().children(".box").removeClass('cancel');
+						$(this).attr('src','images/Group 17.png');
+					}else{
+						$(this).parents().children(".box").addClass('cancel');
+						$(this).attr('src','images/Group 36.png');
+					}
+					
+					
+				});
+
+
+				
+				
+			});
+
+		</script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 	<title>mapping</title>
 	<link rel="stylesheet" type="text/css" href="css/main_header.css">
+	<link rel="stylesheet" type="text/css" href="css/mapping.css">
 </head>
 <body>
 <div class="second-navbar link-fontsize">
@@ -23,33 +24,33 @@
 				</div>
 				<div class="ftp-form">
 					<div class="form-field">
-					<img src="images/Group 17@2x.png">
+					<img class="form-img" src="images/Group 21.png">
 					<input class="input-text" type="text" name="host" placeholder="Customer">
 					</div>
 					<div class="form-field">
-					<img src="images/Group 17.png">
+					<img class="form-img" src="images/Group 21.png">
 					<input type="text" name="Port" placeholder="Supplier">
 				</div>
 				<div class="form-field">
-					<img src="images/Group 17.png">
+					<img class="form-img" src="images/Group 21.png">
 					<input type="text" placeholder="Article Family" name="username">
 				</div>
 				<div class="form-field">
-					<img src="images/Group 17.png">
+				<img class="form-img" src="images/Group 21.png">
 					<input type="password" placeholder="Article" name="password">
 				</div>
 				<div class="form-field">
-					<img src="images/Group 21.png">
+					<img  class="form-img" src="images/Group 21.png">
 						<input type="text" name="Port" placeholder="Sales Documents">
 						<!-- <img src="images/Group 17.png"> -->
 					</div>
 
 					<div class="form-field">
-						<img src="images/Group 17.png">
+						<img class="form-img" class="form-img" src="images/Group 21.png">
 					<input type="text" placeholder="Purchase Documents" name="username">
 				</div>
 				<div class="form-field">
-					<img src="images/Group 17.png">
+					<img class="form-img" src="images/Group 21.png">
 					<input type="password" placeholder="Stock Documents" name="password">
 				</div>
 					<input class="save-btn" type="submit" name="submit" value="Save and Continue">
@@ -57,5 +58,34 @@
 
 				</div>
 		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$('.form-field').click(function(){
+					{
+						if($(this).find('.form-img').attr('src') == "images/Group 21.png")
+						{
+							// alert(1)
+							$(this).find('.form-img').attr('src',"images/Group 17.png");
+						}
+						else{
+							// alert(0)
+							$(this).find('.form-img').attr('src',"images/Group 21.png");
+						}
+
+
+					}
+
+
+					
+
+
+				});
+			});
+			
+
+		</script>
 </body>
 </html>

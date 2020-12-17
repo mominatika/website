@@ -28,3 +28,7 @@
 
 
 }
+.box a{color:red!important;}
+.cancel{
+		border: 1px solid red !important;
+}

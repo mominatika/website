@@ -60,6 +60,8 @@
 	width: 200px;
 	/*margin-left:5px;*/
 }
+
+
 .bottom-link{border-top:1px solid grey;
 			margin-top: 100px;
 			
@@ -121,16 +123,19 @@ main{
 }
 .right-menu{
 	/*border: 1px solid blue;*/
-	display: flex;
+	/*display: flex;*/
 	justify-content: center;
+	position: relative;
 	align-items: center;
 	padding: 10px 20px;
+	width: 240px;
 
 
 }
-/*.link-font{font-size: 15px;} */
+.link-fontsize{font-size: 10px;} 
 .right-menu a{
-				/*font-size: 15px;*/
+				color: grey;
+				font-size: 15px;
 				font-weight: 500;
 }
 .sage a{color:#458D1A;
@@ -138,20 +143,21 @@ main{
 		
  }
 .sage-word{
+	color:#458D1A;
 			font-weight: 900;
+}
+
+
+.admin-logo img{
+	/*border: 1px solid red;*/
+			position: absolute;
+				top:15%;
+
+
 }
 .admin{
 	/*border: 1px solid red;*/
-	width: 120px;
-		position: relative;
-			/*padding: 10px;*/
-		/*padding: 0 0 0 30px;*/
-}
-.admin a{
-		color: grey;
-		font-weight: 500;
-		position: absolute;
-		top:4px;
+		margin-left: 55px;
 }
 .second-navbar{background-color: #63BA2F;
 				margin-left: 20px;
@@ -212,6 +218,14 @@ main{
 
 }
 
+.active a{color:#63BA2F !important;
+
+
+}
+.icon{
+	filter:grayscale(10); 
+}
+.icon-color img{filter: none;}
 @media only screen and (max-width:1180px)
 {
 		/*body{background-color: pink}	*/
@@ -279,7 +293,6 @@ main{
 
 
 		
-		/*.right-menu*/
 }
 @media only screen and (max-width: 1024px)
 {
@@ -311,6 +324,7 @@ main{
 					font-size: 12px;
 				
 				}
+	
 	.menubar{
 
 			width: 200px;
@@ -355,6 +369,10 @@ main{
 			margin-top:15%;
 
 		}
+		.admin{
+	/*border: 1px solid red;*/
+		margin-left: 43px;
+}
 
 }
 @media only screen and (max-width: 800px)
@@ -387,12 +405,7 @@ main{
 						height: 25px;
 						/*border: 1px solid red;*/
 		}
-		.admin a{
-		/*color: grey;*/
-		/*font-weight: 500;*/
-		/*position: absolute;*/
-		top:7px;
-		}
+		
 		.Support{
 				/*border: 1px solid blue;*/
 			position: absolute;
@@ -438,11 +451,7 @@ main{
 						margin-left: 10px;
 						/*border: 1px solid red;*/
 		}
-		.admin a{
-		/*color: grey;*/
-		/*font-weight: 500;*/
-		/*position: absolute;*/
-		top:8px;
+	
 
 	}
 	.Support{
@@ -509,12 +518,6 @@ main{
 						height: 25px;
 		}
 		.left-menu h2{top:2px;}
-		.admin a{
 		
-		top:8px;
-			}
-		.admin {border:1px solid white;
-				width: 100px;
-				}
 			
 	}
