@@ -13,20 +13,14 @@
 				
 }
 .menubar{
-	/*position: relative;*/
 		width: 27%;
-		/*width: 350px;*/
 	background-color:#F2F2F2;
-	/*border: 1px solid red;*/
-	/*opacity: 1;*/
 }
 .logo {
 
 		text-align: center;
 		margin:54px 0 0px 0;
-		/*top:50px;*/
-		/*text-align: center;*/
-		/*padding: 50px ;*/
+	
 }
 .logo img{
 		width: 230px;
@@ -115,21 +109,16 @@ main{
 }
 .right-menu img{width: 27px;
 				height: 27px;
-				/*position: absolute;*/
-				/*top:0;*/
-				/*left: 0px;*/
+			
 				margin: 0 15px;
-				/*margin-right: 70px;*/
 }
 .right-menu{
-	/*border: 1px solid blue;*/
-	/*display: flex;*/
 	justify-content: center;
 	position: relative;
 	align-items: center;
 	padding: 10px 20px;
-	width: 240px;
-
+	width: 234px;
+	/*outline: 1px solid red;*/
 
 }
 .link-fontsize{font-size: 10px;} 
@@ -425,8 +414,8 @@ main{
 	
 	/*body{background-color: green}*/
 	.menubar{
-				width: 150px;
-				padding: 12px;
+				width: 130px;
+				padding: 10px;
 
 	}
 	/*main{width: }*/
@@ -443,6 +432,10 @@ main{
 			.left-menu h2{
 				font-size: 8px;
 		
+		}
+		.right-nav{
+			/*outline: 1px solid white;*/
+						margin-right: 25%;
 		}
 		.left-menu{width: 130px;}
 		.right-menu img{
@@ -479,7 +472,7 @@ main{
 	@media only screen and (max-width:550px)
 	{
 		body{
-					background-color: red;
+					/*background-color: red;*/
 		}
 		.menubar{
 				width: 140px;

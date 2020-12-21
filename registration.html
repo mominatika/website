@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/login.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
+</head>
+<body>
+	<div class="container">
+		<div class="main-container">
+				<div class=leftpart>
+						
+						<div class="login-part">
+							<div class="image-logo">
+								<img src="images/logo.png">
+								<!-- right part -->
+							</div>
+							<div class="form">
+								
+								<h3>Registration</h3>
+								<form id="from_id" action="index.html" method="post">
+								<div class="form-field">
+									<input type="text" name="Company_path" placeholder="Company File Path">
+
+								</div>
+
+								<div class="form-field">
+									<input type="text" name="Company_name" placeholder="Company Name">
+
+								</div>
+								<div class="form-field">
+									<input type="password" name="Company_pwd" placeholder="Password">
+
+								</div>
+								
+								<div class="form-field">
+									<input type="submit" class="submit" name="registration" value="registration">
+
+								</div>
+							</div>
+						</form>
+							</div>
+								
+
+						</div>
+
+				
+
+				<div class="rightpart">
+						<div class="regi_detail">
+							<div class="file_path">
+								<span class="reg_head">File path:</span><span class="reg_p">your sage account file path</span>
+							</div>
+							<div class="file_path">
+								<span class="reg_head">Company Name:</span><span class="reg_p">your sage account file path</span>
+							</div>
+							<div class="file_path">
+								<span class="reg_head">Password:</span><span class="reg_p">your sage account file path</span>
+							</div>
+						</div>
+
+			</div>
+		</div>
+			
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/jquery-validation/dist/jquery.validate.min.js"></script>
+	<!-- additional-methods.min.js -->
+	<script type="text/javascript" src="js/jquery-validation/dist/additional-methods.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+
+				$("#from_id").validate({
+							rules:{
+
+									Company_path:{
+										required:true,
+										lettersonly:true,
+										minlength:3,
+
+
+								},
+								Company_name:{required:true,
+												lettersonly:true,
+
+
+								},
+								Company_pwd:{required:true,
+											rangelength:[8,15],
+
+								}
+
+							},
+							 messages:{
+							 		Company_path:{required:"Company path is required"},
+
+				 			Company_name:{required:"Company name is required"},
+				 			Company_pwd:{required:"Password is required"}
+
+							 	}
+
+
+
+				});
+
+
+		});
+	</script>
+
+</body>
+</html>

@@ -3,6 +3,25 @@
 <head>
 	<title>settings</title>
 	<link rel="stylesheet" type="text/css" href="css/main_header.css">
+	<style type="text/css">
+		
+		.error{color: red;
+			width: 200px;
+
+			
+		}
+		p{
+			margin:10px 20px;
+		}
+
+		.success input{
+				border:1px solid #63BA2F;
+		}
+		.inerror input{
+			border:1px solid red;
+		}
+
+	</style>
 </head>
 <body>
 	<div class="second-navbar link-fontsize">
@@ -20,24 +39,186 @@
 				<div class="header">
 					<h1>FTP Settings</h1>
 				</div>
-				<div class="ftp-form">
+				<form action="form_sub.html" method="post" id="form_sub" onsubmit="return formvalidation();">
+				<div id="ftp-form" class="ftp-form">
+					
+					<div id="success"></div>
 					<div class="form-input">
-										<input type="text" name="host" placeholder="HOST">
-									</div>
-									<div class="form-input">
-					<input type="text" name="Port" placeholder="port">
+					<input type="text" id='host' name="host" placeholder="HOST" onblur="formvalidation()">
+						<p id="hostname"></p>
+					</div>
+					<div class="form-input">
+					<input type="number" id="port" name="Port" placeholder="port" onblur="formvalidation()">
+					<p class="portfield"></p>
 				</div>
 				<div class="form-input">
-					<input type="text" placeholder="FTP User Name" name="username">
+					<input type="text" id="FTP_user" placeholder="FTP User Name" name="username" onblur="formvalidation()">
+					<p class="username"></p>
 				</div>
 				<div class="form-input">
-					<input type="password" placeholder="FTP password" name="password">
+					<input type="password" id="FTP_Pwd" placeholder="FTP password" name="password" onblur="formvalidation()">
+					<p class="pwd"></p>
 				</div>
 				<div class="form-input">
-					<input class="save-btn" type="submit" name="submit" value="Save and Continue">
+					<input class="save-btn" type="submit" name="submit"  value="Save and Continue">
 				</div>
 				</div>
+			</form>
 		</div>
 			
+			<script type="text/javascript">
+						
+						var form = document.getElementById('form_sub');
+						var hostfield = document.getElementById('host');
+						var portfield =document.getElementById('port');
+						var userfield= document.getElementById('FTP_user');
+						var pwd = document.getElementById('FTP_Pwd');
+				
+								var condition = /^[a-zA-Z0-9_]+$/;
+								function password_validation(Pwd_val)
+								{
+									var pwdcondition = /^[A-Za-z0-9]\w{7,14}$/;
+									if(Pwd_val.match(pwdcondition))
+									{
+										return true;
+									} 
+									
+								}
+	
+						function formvalidation()
+						{
+
+							const host_val = hostfield.value.trim();
+							const port_val= portfield.value.trim();
+							const user_val =userfield.value.trim();
+							const Pwd_val= pwd.value.trim();
+							
+							var error = false;
+
+							if(host_val == "")
+							{
+								ErrorMsg(hostfield,"this fied is required");
+								error = true;
+
+							}
+							else
+							{
+
+								if(host_val.length < 3)
+								{
+										ErrorMsg(hostfield,"minimum 3 latter is required");
+										// alert(1);
+								}
+								else if(!condition.test(host_val))
+								{
+									// alert(1);
+									ErrorMsg(hostfield,"space is not allowed");
+									error=true;
+								}
+								else
+								{
+										SuccessMsg(hostfield);
+								}
+								
+								
+							}
+
+							if(port_val === "")
+							{
+								// alert(0);
+								ErrorMsg(portfield,"this fied is required");
+								error = true;
+							}
+							else
+							{
+								// alert(1);
+								
+								SuccessMsg(portfield);
+								// alert(port_val);
+							}
+
+							if(user_val ===  "")
+							{
+								// alert(0);
+							
+								ErrorMsg(userfield,"this fied is required");
+								error = true;
+
+							}
+							else
+							{
+								if(!condition.test(user_val))
+								{
+										ErrorMsg(userfield,"space is not allowed");
+										error =true;
+								}
+								else
+								{
+										SuccessMsg(userfield);
+								}
+							}
+
+							if(Pwd_val == "")
+							{
+								// alert(0);
+								error = true;
+								ErrorMsg(pwd,"password is required");
+
+							}
+							else
+							{
+								if(!password_validation(Pwd_val))
+								{
+
+									ErrorMsg(pwd,"password range 7-14 only numbers and latter is allowed");
+									error =true;
+									// alert('error');
+								}
+								else
+								{
+
+								SuccessMsg(pwd);
+								}
+							}
+
+							if(error){
+								return false;
+							}else{
+								return true;
+							}
+
+
+
+
+						}
+						function ErrorMsg(input,error)
+						{
+							var input_field = input.parentElement;
+							// alert(1);
+							var error_field = input_field.querySelector("p");
+								error_field.innerHTML = error;
+							// error_field.className('inerror');
+							input_field.className = "inerror error";
+
+
+						}
+						function SuccessMsg(input)
+						{
+							var input_field =input.parentElement;
+							var success_msg=input_field.querySelector('p');
+							success_msg.innerHTML =" ";
+							input_field.className ="success";
+
+						}
+
+
+					
+
+
+					
+				
+				
+
+			</script>
 </body>
 </html>
