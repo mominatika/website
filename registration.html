@@ -70,7 +70,11 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			
+				
+			$.validator.addMethod('strongpassword',function(pwdvalue){
+				condition = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+				return condition.test(pwdvalue);
+			},"password must be strong");
 
 				$("#from_id").validate({
 							rules:{
@@ -88,7 +92,9 @@
 
 								},
 								Company_pwd:{required:true,
-											rangelength:[8,15],
+											strongpassword:true,
+
+											// rangelength:[8,15],
 
 								}
 
@@ -97,7 +103,10 @@
 							 		Company_path:{required:"Company path is required"},
 
 				 			Company_name:{required:"Company name is required"},
-				 			Company_pwd:{required:"Password is required"}
+				 			Company_pwd:{
+				 					required:"Password is required",
+				 					strongpassword:UpperCase, LowerCase, Number/SpecialChar and min 8 Chars;
+				 		}
 
 							 	}
 
